@@ -1,95 +1,55 @@
-## Binary Search
+## Buried Deep
 
 ---
 
 ### Challenge
 
-Want to play a game? As you use more of the shell, you might be interested in how they work! Binary search is a classic algorithm used to quickly find an item in a sorted list. Can you find the flag? You'll have 1000 possibilities and only 10 guesses. Cyber security often has a huge amount of data to look through - from logs, vulnerability reports, and forensics. Practicing the fundamentals manually might help you in the future when you have to write your own tools!
+"I’m not a hacker. I’m just someone who wants to make the world a little better. But the world isn’t going to change itself."
+
+Submit your answer in the following format: ACECTF{3x4mpl3_fl4g}
+
+The flag content should be in lowercase letters only.
 
 **Attached files:**  
-[challenge.zip](https://artifacts.picoctf.net/c_atlas/20/challenge.zip)
+[](http://34.131.133.224:9998/)
 
 ---
 
 ### Solution
 
-We begin by running the webshell provided in picoCTF for basic challenges. Since it is a Linux interface, we need to be familiar with basic Linux commands.
+The website has a lot of philosophical text. Since the clue is 'Buried Deep' let's look at the robots.txt of the website.
 
-Here, I use `wget` to download the attached file directly from the link:
+![robots.txt](./attachments/BD1.png)
 
-![Downloading challenge.zip using wget](./attachments/BS1.png)
+After examining each file in the robots.txt, we find these following clues.
 
-Now that we have the file in our home directory, we unzip it and find a directory inside it, which leads to further directories until we reach a drop-in directory with `guessing_game.sh`, which is an executable file that prompts us to use the binary search algorithm.
+![/buried](./attachments/BD2.png)
 
-![Extracted files from challenge.zip](./attachments/BS2.png)
+![/secret_path](./attachments/BD3.png)
 
-#### guessing_game.sh Code
+![/encrypted](./attachments/BD4.png)
 
-```bash
-#!/bin/bash
+We copy the ascii text from /buried, and decode it to get: `1st Part of the Flag is : ACECTF{1nf1l7r471ng_7h3_5y573m_`
 
-# Generate a random number between 1 and 1000
-target=$(( (RANDOM % 1000) + 1 ))
+We copy the morse code from /secret_path and decode it to get `2NDPARTOFTHEFLAGIS:15_345Y_WH3N_Y0U_KN0W_WH3R3_`
 
-echo "Welcome to the Binary Search Game!"
-echo "I'm thinking of a number between 1 and 1000."
+For the 3rd part, as the clue suggest, we check out the css file present for styling, and find this code:
 
-# Trap signals to prevent exiting
-trap 'echo "Exiting is not allowed."' INT
-trap '' SIGQUIT
-trap '' SIGTSTP
-
-# Limit the player to 10 guesses
-MAX_GUESSES=10
-guess_count=0
-
-while (( guess_count < MAX_GUESSES )); do
-    read -p "Enter your guess: " guess
-
-    if ! [[ "$guess" =~ ^[0-9]+$ ]]; then
-        echo "Please enter a valid number."
-        continue
-    fi
-
-    (( guess_count++ ))
-
-    if (( guess < target )); then
-        echo "Higher! Try again."
-    elif (( guess > target )); then
-        echo "Lower! Try again."
-    else
-        echo "Congratulations! You guessed the correct number: $target"
-
-        # Retrieve the flag from the metadata file
-        flag=$(cat /challenge/metadata.json | jq -r '.flag')
-        echo "Here's your flag: $flag"
-        exit 0  # Exit with success code
-    fi
-
-done
-
-# Player has exceeded maximum guesses
-echo "Sorry, you've exceeded the maximum number of guesses."
-exit 1  # Exit with error code to close the connection
+#### styles.css Code
+```
+#flag {
+    display: none;
+    content: "bC5 !2CE @7 E96 u=28 :D i f9b0db4CbEd0cCb03FC`b5N"; 
+}
 ```
 
----
+if we paste this text in ![cipher identifier](https://www.dcode.fr/cipher-identifier) it tells us that the text is probably ROT47 encoded. We use the decoder to get the finaly part of the flag: `3rd Part of the Flag is : 7h3_53cr3t5_4r3_bur13d}`
 
-According to the Binary Search Algorithm, searching is performed by setting the initial index value as `low` and the final index value as `high` for sorted values. In the usual searching algorithm, the program begins by checking whether the key (the number we're searching for) is greater/less than the middle value.
-
-- If it is less, then `middle - 1` is set as the new `high` index.
-- Otherwise, `middle + 1` is set as the new `low` index.
-- The loop continues while `low <= high`.
-
-This code prompts us to guess a number where we have only 10 chances to get it right. By visualizing the binary search algorithm, we can make guesses and find the flag.
-
-We use the `SSH` (Secure Shell) command given in the challenge description to remotely connect to the server, which will return the flag. Upon entering the password, the same `guessing_game.sh` runs on the server, and upon making the correct guesses, we retrieve our flag!
-
-![Using ssh to get the flag](./attachments/BS3.png)
+Finally, we put everything together and make it lowercase.
 
 ---
 
 ### Flag
 
 ```
-picoCTF{g00d_gu355_de9570b0}
+ACECTF{1nf1l7r471ng_7h3_5y573m_15_345y_wh3n_y0u_kn0w_wh3r3_7h3_53cr3t5_4r3_bur13d}
