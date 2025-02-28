@@ -19,15 +19,15 @@ The flag content should be in lowercase letters only.
 
 The website has a lot of philosophical text. Since the clue is 'Buried Deep' let's look at the robots.txt of the website.
 
-![robots.txt](./attachments/BD1.png)
+![robots.txt](../attachments/BD1.png)
 
 After examining each file in the robots.txt, we find these following clues.
 
-![/buried](./attachments/BD2.png)
+![/buried](../attachments/BD2.png)
 
-![/secret_path](./attachments/BD3.png)
+![/secret_path](../attachments/BD3.png)
 
-![/encrypted](./attachments/BD4.png)
+![/encrypted](../attachments/BD4.png)
 
 We copy the ascii text from /buried, and decode it to get: `1st Part of the Flag is : ACECTF{1nf1l7r471ng_7h3_5y573m_`
 
@@ -43,7 +43,7 @@ For the 3rd part, as the clue suggest, we check out the css file present for sty
 }
 ```
 
-if we paste this text in ![cipher identifier](https://www.dcode.fr/cipher-identifier) it tells us that the text is probably ROT47 encoded. We use the decoder to get the finaly part of the flag: `3rd Part of the Flag is : 7h3_53cr3t5_4r3_bur13d}`
+if we paste this text in [cipher identifier](https://www.dcode.fr/cipher-identifier) it tells us that the text is probably ROT47 encoded. We use the decoder to get the finaly part of the flag: `3rd Part of the Flag is : 7h3_53cr3t5_4r3_bur13d}`
 
 Finally, we put everything together and make it lowercase.
 
