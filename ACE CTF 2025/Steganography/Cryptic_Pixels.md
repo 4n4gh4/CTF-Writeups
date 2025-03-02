@@ -22,7 +22,11 @@ After downloading our png file, we use binwalk to see whether there's any data e
 
 When we extract the files, we get a password protexted zip `B8103.zip` and a zlib file `5B.zlib`
 
-I'm gonna try cracking the zip password with wordlist `rockyou.txt` using tool `frcrackzip`. It successfully cracks the password which is: `qwertyuiop`
+I'm gonna try cracking the zip password with wordlist `rockyou.txt` using tool `frcrackzip`.
+
+`fcrackzip -u -D -p /usr/share/wordlists/rockyou.txt B8103.zip`
+
+It successfully cracks the password which is: `qwertyuiop`
 
 And, upon entering it we can see that out `flag.txt` got extracted. We just have to `cat` it to see its contents.
 
