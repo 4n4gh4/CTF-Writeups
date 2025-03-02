@@ -18,7 +18,8 @@ Submit your answer in the following format: ACECTF{3x4mpl3_fl4g}
 
 After downloading our png file, we use binwalk to see whether there's any data embedded in the image.
 
-![binwalk](../attachments/CP1.png)
+![binwalk](https://github.com/user-attachments/assets/d4a4a821-5498-4981-84b7-fff7555bcc19)
+
 
 When we extract the files, we get a password protexted zip `B8103.zip` and a zlib file `5B.zlib`
 
