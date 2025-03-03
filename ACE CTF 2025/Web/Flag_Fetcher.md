@@ -14,8 +14,9 @@ Hey guys, I created a flag fetcher using some web stacks & technologies. It was 
 
 Frankly, I'm not sure whether the chall was supposed to be this easy. But when I inspected the website, especially the console, I found this string of errors.
 
-![console error log](../attachments/FF1.png)
-![console error log2](../attachments/FF2.png)
+![image](https://github.com/user-attachments/assets/83dffa9e-7fff-41c5-b7b2-14eaa240d4ed)
+
+![image](https://github.com/user-attachments/assets/a6f43b37-fae2-4213-837d-97ad81a4ef31)
 
 If you closesly observe this, you can see that the strings represent `acectf{r3d1r3ct10n}`
 
