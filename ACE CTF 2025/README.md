@@ -1,7 +1,5 @@
 # ACE CTF 2025
 
-As part of ACE CTF 2025, I completed the following challenges and their writeups are available.
-
 1. Binary Exploitation
    - Underflow
      
