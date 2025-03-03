@@ -24,9 +24,10 @@ After examining each file in the robots.txt, we find these following clues.
 
 ![/buried](https://github.com/user-attachments/assets/77fa21cf-e7ee-4c6d-b456-088d8b18cb3c)
 
-![/secret_path](../attachments/BD3.png)
+![/secret_path](https://github.com/user-attachments/assets/62b47317-09e5-429b-8dc6-7fbb9e6980fe)
 
-![/encrypted](../attachments/BD4.png)
+
+![/encrypted](https://github.com/user-attachments/assets/b3bd9e76-0137-4b38-8c0d-3c8f33602bf5)
 
 We copy the ascii text from /buried, and decode it to get: `1st Part of the Flag is : ACECTF{1nf1l7r471ng_7h3_5y573m_`
 
