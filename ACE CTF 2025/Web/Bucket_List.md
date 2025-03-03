@@ -20,7 +20,7 @@ Here, there seemed to be a list of files printed. I began looking at the file na
 
 Came across a file titles hint.txt... Then it struck me to maybe search whether there are more .txt files. I used `Ctrl+F` to search and found another .txt file titled secret.txt.
 
-![secret.txt](../attachments/BL1.png)
+![secret.txt](https://github.com/user-attachments/assets/6ace511b-11c5-42de-906e-22e0d9165682)
 
 I navigated to the file and it printed a clear base64 encoded text. Upon decoding it, I got the flag.
 
