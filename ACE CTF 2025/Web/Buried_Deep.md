@@ -10,7 +10,6 @@ Submit your answer in the following format: ACECTF{3x4mpl3_fl4g}
 
 The flag content should be in lowercase letters only.
 
-**Attached files:**  
 [](http://34.131.133.224:9998/)
 
 ---
@@ -19,11 +18,11 @@ The flag content should be in lowercase letters only.
 
 The website has a lot of philosophical text. Since the clue is 'Buried Deep' let's look at the robots.txt of the website.
 
-![robots.txt](../attachments/BD1.png)
+![robots.txt](https://github.com/user-attachments/assets/3f5c61b5-82c7-4656-87d0-43d1bc0a0eb7)
 
 After examining each file in the robots.txt, we find these following clues.
 
-![/buried](../attachments/BD2.png)
+![/buried](https://github.com/user-attachments/assets/77fa21cf-e7ee-4c6d-b456-088d8b18cb3c)
 
 ![/secret_path](../attachments/BD3.png)
 
