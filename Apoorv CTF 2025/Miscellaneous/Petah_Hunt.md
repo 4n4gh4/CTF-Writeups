@@ -20,7 +20,7 @@ When I thought about it, since it's a misc challenge, multiple domains could be 
 
 ![buffedpetah](https://github.com/user-attachments/assets/c33924f8-55f4-47a8-bf62-05b8076c5e10)
 
-The ![readme](https://github.com/buffedpetah) file translates to:
+The [readme](https://github.com/buffedpetah) file translates to:
 
 ```
 Hello, I'm Peter Griffin. Student by day, Fortnite warrior by night. I enjoy burgers that might be portals to other dimensions, and the weird moments life throws at me. I once watched my horse attempt to moonwalk under a double rainbow. I stoically surrender to the cosmic absurdity of everyday life.
