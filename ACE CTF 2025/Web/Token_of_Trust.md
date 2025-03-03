@@ -36,7 +36,7 @@ Upon forwarding this request, the token is printed on the website `{"token":"eyJ
 
 Since it is a jwt token, we can check the payload and algorithm using [jwt.io](https://jwt.io/). Using the jwt decoder, we get the payload and algorithm.
 
-![jwt decoding](../attachments/TT1.png)
+![jwt token](https://github.com/user-attachments/assets/0f1bb454-74cb-4df5-9c5a-ec1dfb8aaee5)
 
 Since we find that the user is specified as `guest`, instead of `ace` (our input), we can modify the user to `admin` and craft a new token using the jwt encoder like this one:
 
