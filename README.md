@@ -11,3 +11,5 @@ CTF Writeups for all the CTF's I've participated in so far. The list includes:
 9. DawgCTF 2025 - GlitchBusters
 10. b01lersCTF 2025 - GlitchBusters
 11. TJCTF 2025 - GlitchBusters
+12. ACN CTF 2025 - GlitchBusters
+    
